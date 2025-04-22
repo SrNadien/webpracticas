@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="icon" href="https://st4.depositphotos.com/18672748/21457/v/450/depositphotos_214577312-stock-illustration-restaurant-vector-icon-isolated-transparent.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Restaurante|Menu Inicio</title>
+</head>
+<body>
+
+ 
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" target="_blank"> <i class="fas fa-home"></i>Menú</a></li> <li>
+          <li><a href="contact.html" target="_blank"> <i class="fas fa-envelope"></i> Contáctanos</a></li>
+          <li><a href="nuestracasa.html" target="_blank"> <i class="fas fa-home"></i>Nuestra Casa</a></li>
+        </ul>
+      </nav>
+      <div class="auth">
+        <a href="#"> <i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="#"> <i class="fas fa-user"></i> Registro</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="content container">
+    <section class="cards">
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmHF5RBRf3oVqVx1Uza-w5K-Ywl1HXx4Lxw&s" alt="Plato 1">
+        <h3>Paella De Mariscos</h3>
+        <a href="#" id="verMasBtn2" class="btn">Ver Más</a>
+          </article>
+      <article class="card">
+        <img src="https://imag.bonviveur.com/arroz-con-pollo-y-verduras.jpg" alt="Plato 2">
+        <h3>Arroz Con Pollo</h3>
+        
+        <a href="#" id="verMasBtn3" class="btn">Ver Más</a>  
+      </article>
+      <br>
+      <article class="card">
+        <img src="https://www.shutterstock.com/image-photo/delicious-plate-emilian-cappelletti-bolognese-260nw-1968227674.jpg" alt="Plato 4">
+        <h3>Cappelletti</h3>
+        
+            <a href="#" id="verMasBtn4" class="btn">Ver Más</a>
+          </article>
+      <article class="card">
+        <img src="https://www.recetasnestle.cl/sites/default/files/srh_recipes/57d2453074b608263f3a814302cc7864.jpg" alt="Plato 3">
+        <h3>Lasaña</h3>
+        
+            <a href="#" id="verMasBtn5" class="btn">Ver Más</a>
+      </article>
+    </section>
+
+    <aside class="sidebar">
+      <h2>Cursos</h2>
+      <ul class="cursos">
+        <li>
+          <img src="https://i.ytimg.com/vi/gADDr7vtFSc/maxresdefault.jpg" alt="">
+          <span><a href="https://x.com/kingnadien" class="mi-enlace">Pastas Frescas</a></span>
+        </li>
+        <li>
+          <img src="https://media.airedesantafe.com.ar/p/62d7a4dc6ba13254d3457b07a752c190/adjuntos/268/imagenes/003/791/0003791480/1200x675/smart/flan-dulce-leche-y-crema-la-receta-mas-facil-hacer-un-postre-que-nunca-falla.png" alt="">
+          <span><a href="https://x.com/kingnadien" class="mi-enlace">Postres Regionales</a></span>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>Visítanos en:<br>Calle Falsa 123, Springfield</p>
+  </footer>
+
+<!-- popups we-->
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 2; i <= 5; i++) {
+        const btn = document.getElementById(`verMasBtn${i}`);
+        const popup = document.getElementById(`popup${i}`);
+        const cerrar = document.getElementById(`cerrarPopup${i}`);
+  
+        if (btn && popup && cerrar) {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            popup.style.display = 'block';
+          });
+  
+          cerrar.addEventListener('click', () => {
+            popup.style.display = 'none';
+          });
+  
+          window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+              popup.style.display = 'none';
+            }
+          });
+        }
+      }
+    });
+  </script>
+
+<!-- Botón 1 -->
+
+<div id="popup2" class="popup">
+  <div class="popup-contenido">
+    <span id="cerrarPopup2" class="cerrar">&times;</span>
+    <h3>Paella De Mariscos</h3>
+    <p>Plato típico de la <strong>cocina española</strong>, originario de la <strong>Comunidad Valenciana</strong>.<br>
+       Consiste en <strong>arroz seco</strong> cocido en una <strong>paellera</strong><br>
+      con diferentes ingredientes, como <strong>carnes</strong>, <strong>mariscos</strong> o <strong>verduras</strong>..
+  </div>
+</div>
+
+<!-- Botón 2 -->
+
+<div id="popup3" class="popup">
+  <div class="popup-contenido">
+    <span id="cerrarPopup3" class="cerrar">&times;</span>
+    <h3>Arroz Con Pollo</h3>
+    <p> <strong>Consiste en pollo cocido con arroz</strong>, cebollas, azafrán<br>
+        y una gran variedad de otros granos o verduras.</p> 
+  </div>
+</div>
+
+<!-- Botón 3 -->
+
+<div id="popup4" class="popup">
+  <div class="popup-contenido">
+    <span id="cerrarPopup4" class="cerrar">&times;</span>
+    <h3>Cappelletti</h3>
+    <p>  <strong>Cappelletti</strong> (los tortellini) <em>(en italiano: [kappelˈletti])</em><br>
+      son <strong>pastas rellenas con forma de anillo</strong>, llamadas así por su forma<br>
+      característica que recuerda a un <strong>sombrero</strong> (<em>cappello</em> en italiano).<br>
+      Comparados con los <strong>tortellini</strong>, tienen una <strong>forma diferente</strong>,<br>
+      <strong>mayor tamaño</strong>, una <strong>masa más gruesa</strong> y un <strong>relleno distinto</strong>.</p>
+  </div>
+</div>
+
+<!-- Botón 4 -->
+
+<div id="popup5" class="popup">
+  <div class="popup-contenido">
+    <span id="cerrarPopup5" class="cerrar">&times;</span>
+    <h3>Lasaña</h3>
+    <p>  Es <strong>un tipo de pasta</strong>.<br>
+      Se suele servir en <strong>láminas superpuestas</strong> intercaladas<br>
+      con capas de ingredientes al gusto, más frecuentemente<br>
+      <strong>carne (ragú) en salsa boloñesa</strong> y <strong>bechamel</strong>.</p>
+  </div>
+  </div>
+  
+</body>
+</html>
